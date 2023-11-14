@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Json from './components/json-save'
+import Excel from './components/excel-export'
+
 const Header = () => {
     return (
         <div className="row">
@@ -13,7 +16,11 @@ const Header = () => {
 
                     <button type='button' className='btn btn-outline-dark'>Insert Column</button>
                     <button type='button' className='btn btn-outline-dark'>Insert Row</button>
+                    <Json />
+                    <Excel />
                 </div>
+                
+                
 
 
             </div>

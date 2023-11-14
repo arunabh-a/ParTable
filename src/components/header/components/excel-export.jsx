@@ -2,7 +2,7 @@ import React from 'react'
 
 const Excel = () => {
     return (
-        <div>Excel</div>
+        <button type="button" className='btn btn-dark'>Export to Excel</button>
     )
 }
 

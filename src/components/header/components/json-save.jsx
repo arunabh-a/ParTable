@@ -2,7 +2,7 @@ import React from 'react'
 
 const Json = () => {
     return (
-        <div>Json</div>
+        <button type="button" className='btn btn-dark'>Save as JSON</button>
     )
 }
 
