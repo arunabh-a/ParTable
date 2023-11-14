@@ -73,10 +73,10 @@ const Table = ({ columns, addColumn, setColumns, rows, addRow, setRows }) => {
                             </tr>
                         ) : (
                             rows.map((row, index) => (
-                                <tr key={index * 434223}>
+                                <tr key={index * 4343342223}>
                                     <td className="text-center">{index + 1}</td>
                                     {row.map((rowColumn, rowColumnIndex) => (
-                                        <td key={index / 22344}>
+                                        <td key={index}>
                                             <input 
                                             type="text" 
                                             value={rowColumn}
