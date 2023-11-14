@@ -1,0 +1,15 @@
+.row-img {
+    width: 50%;
+}
+
+.column-img {
+    width: 5%;
+}
+
+.dash-table {
+    border-radius: 40px;
+}
+
+::placeholder {
+    color: white;
+}
