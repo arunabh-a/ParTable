@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import { Header } from './components'
+import { Header, Table } from './components'
 
 const App = () => {
     return (
         <div className="container-fluid">
             <Header />
-            
+            <Table />
         </div>
     )
 }
