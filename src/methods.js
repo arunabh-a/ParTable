@@ -1,5 +1,5 @@
 export const convertDataToJSON = (data) => {
-    const {rows, columnns} = data;
+    const {rows, columns} = data;
     let convertedData = [];
         rows.map((row, index) => {
             let obj = {Sno: index + 1};

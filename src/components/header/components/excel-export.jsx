@@ -18,7 +18,11 @@ const Excel = ({ columns, rows }) => {
 
     }
     return (
-        <button type="button" onClick = {() => downloadExcelFile()} className='btn btn-dark'>Export to Excel</button>
+        <button 
+            type="button" 
+            onClick = {() => downloadExcelFile()} 
+            className='btn btn-dark'>Export to Excel
+        </button>
     )
 }
 
