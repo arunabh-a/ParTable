@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Header, Table } from "./components";
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
     const [columns, setColumns] = useState(["Column 1"]);
@@ -30,6 +31,7 @@ const App = () => {
 
     return (
         <div className="container-fluid">
+            <ToastContainer />
         <Header
             columns = {columns}
             rows = {rows}
