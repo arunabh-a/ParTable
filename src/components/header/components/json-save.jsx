@@ -1,17 +1,11 @@
 import React from 'react'
+import { convertDataToJSON } from '../../../methods';
+
 
 const Json = ({columns, rows}) => {
+    const downloadJSONFile = () => {
+        const data = convertDataToJSON({columns, rows});
 
-    const convertToJSON = () => {
-        let data = [];
-        rows.map((row, index) => {
-            let obj = {Sno: index + 1};
-            columns.map((col, colId) => {
-                obj[col] = row[colId];
-            });
-
-            data.push(obj);
-        });
         const fileData = JSON.stringify(data);
 
         const file = new Blob([fileData], {type: "text/plain"});
@@ -24,7 +18,7 @@ const Json = ({columns, rows}) => {
     }
 
     return (
-        <button type="button" onClick={() => convertToJSON()} className='btn btn-dark'>Save as JSON</button>
+        <button type="button" onClick={() => downloadJSONFile()} className='btn btn-dark'>Save as JSON</button>
     )
 }
 

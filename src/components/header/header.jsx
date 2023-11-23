@@ -17,7 +17,7 @@ const Header = ({ columns, addColumn, rows, addRow }) => {
                     <button type='button' onClick={() => addColumn()} className='btn btn-outline-dark'>Insert Column</button>
                     <button type='button' onClick={() => addRow()} className='btn btn-outline-dark'>Insert Row</button>
                     <Json rows = {rows} columns = {columns} />
-                    <Excel />
+                    <Excel rows = {rows} columns = {columns} />
                 </div>
             </div>
         </div>

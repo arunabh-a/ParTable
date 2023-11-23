@@ -26,11 +26,12 @@ const Table = ({ columns, addColumn, setColumns, rows, addRow, setRows }) => {
         setRows((prevRows) => prevRows.filter((row, id) => index !== id));
 
     }
+
     return (
         <div className="row mb-5">
             <div className="col-md-10 mx-auto mt-5 border-bottom">
                 <table className='table table-dark table-striped dash-table'>
-                    <thead className='bg-dark text-white'>
+                    <thead>
                         <tr>
                             <th></th>
                             {

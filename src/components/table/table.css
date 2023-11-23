@@ -10,6 +10,6 @@
     border-radius: 40px;
 }
 
-::placeholder {
+html::placeholder {
     color: white;
 }
