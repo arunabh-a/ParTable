@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Header, Table } from "./components";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
     const [columns, setColumns] = useState(["Column 1"]);
@@ -16,8 +16,10 @@ const App = () => {
             if (rows.length > 0){
                 setRows((prevRows) => prevRows.map((row) => [...row, ""]));
             }
+            
+            
         } 
-        else alert("Maximum of 9 Columns are Allowed.");
+        else toast.error("Maximum of 9 Columns are Allowed.");
     };
 
     const addRow = () => {

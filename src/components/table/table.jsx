@@ -1,5 +1,6 @@
 import React from 'react'
 import './table.css'
+import { toast } from 'react-toastify'
 
 const Table = ({ columns, addColumn, setColumns, rows, addRow, setRows }) => {
 
@@ -16,9 +17,15 @@ const Table = ({ columns, addColumn, setColumns, rows, addRow, setRows }) => {
     }
 
     const deleteColumn = (index) => {
-        setColumns((prevColumns) => prevColumns.filter((col,id) => index !== id));
-        if(rows.length > 0){
-            setRows((prevRows) => prevRows.map((row) => row.filter((col, id) => index !== id)))
+        if(columns.length > 1){
+            setColumns((prevColumns) => prevColumns.filter((col,id) => index !== id));
+        
+            if(rows.length > 0){
+                setRows((prevRows) => prevRows.map((row) => row.filter((col, id) => index !== id)))
+            }
+        }
+        else {
+            toast.dark("Can't delete more Columns.");
         }
     }
 
